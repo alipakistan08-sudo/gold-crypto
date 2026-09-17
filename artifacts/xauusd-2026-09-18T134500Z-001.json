@@ -1,0 +1,97 @@
+{
+  "schema_version": "signal-v1",
+  "signal_id": "xauusd-2026-09-18T134500Z-001",
+  "created_at": "2026-09-17T19:42:17.920782Z",
+  "symbol": "XAU/USD",
+  "venue": "paper-sim-v1",
+  "setup_id": "sweep-reclaim",
+  "setup_version": "sweep-reclaim-v1",
+  "side": "LONG",
+  "timeframe_regime": "1h",
+  "timeframe_structure": "15m",
+  "timeframe_execution": "5m",
+  "session": "NEW_YORK",
+  "regime": "TREND_UP",
+  "vol_regime": "EXTREME",
+  "entry": 2386.9969421421806,
+  "stop": 2380.7799269469865,
+  "targets": [
+    2402.539480130166,
+    2411.865002922957
+  ],
+  "planned_rr": 2.5,
+  "invalidation": "close below swept low / stop 2380.779927",
+  "exclusions_checked": [
+    "EVENT_LOCK",
+    "DATA_STALE",
+    "EXTREME_VOL",
+    "OFF_HOURS",
+    "STOP_TOO_WIDE"
+  ],
+  "evidence": [
+    {
+      "agent": "market_scout",
+      "timestamp": "2026-09-18T13:45:00Z",
+      "symbol": "XAU/USD",
+      "summary": "session=NEW_YORK regime=TREND_UP vol=EXTREME",
+      "flags": [
+        "VOL_EXTREME",
+        "AWAY_FROM_VWAP"
+      ],
+      "metrics": {
+        "close": 2483.5729885404817,
+        "vwap": 2438.499149689946,
+        "atr": 7.771268993992608
+      },
+      "data_quality_ok": true
+    },
+    {
+      "agent": "technical_analyst",
+      "timestamp": "2026-09-18T13:45:00Z",
+      "symbol": "XAU/USD",
+      "summary": "structure=BULLISH_STACK swing_h=2483.5730 swing_l=2461.0215",
+      "flags": [],
+      "metrics": {
+        "ema_fast": 2476.272180944484,
+        "ema_slow": 2473.2531995748386,
+        "structure": "BULLISH_STACK",
+        "bars": 120
+      },
+      "data_quality_ok": true
+    },
+    {
+      "agent": "liquidity_agent",
+      "timestamp": "2026-09-18T13:45:00Z",
+      "symbol": "XAU/USD",
+      "summary": "spread_ratio=1.10 proxy=0.000132",
+      "flags": [
+        "SWEEP_RECLAIM_LONG"
+      ],
+      "metrics": {
+        "spread_ratio": 1.1,
+        "spread_proxy": 0.000132
+      },
+      "data_quality_ok": true
+    },
+    {
+      "agent": "macro_news_agent",
+      "timestamp": "2026-09-18T13:45:00Z",
+      "symbol": "XAU/USD",
+      "summary": "no active event lock",
+      "flags": [],
+      "metrics": {
+        "event_lock_active": false,
+        "crypto_event_flag": false
+      },
+      "data_quality_ok": true
+    }
+  ],
+  "decision_state": "WAIT_FOR_CONFIRMATION",
+  "quality_score": 0.7999999999999999,
+  "notes": "sweep-reclaim matched",
+  "proposed_quantity": null,
+  "spread": 0.3278316344873436,
+  "atr_15m": 7.771268993992608,
+  "median_spread": 0.2980287586248578,
+  "event_lock_active": false
+}
