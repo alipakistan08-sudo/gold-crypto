@@ -1,2 +1,0 @@
-[console_scripts]
-trading-desk = trading_desk.cli:main
