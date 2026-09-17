@@ -1,0 +1,97 @@
+{
+  "schema_version": "signal-v1",
+  "signal_id": "btcusdt-2026-09-18T134500Z-002",
+  "created_at": "2026-09-17T19:42:17.926219Z",
+  "symbol": "BTC/USDT",
+  "venue": "paper-sim-v1",
+  "setup_id": "sweep-reclaim",
+  "setup_version": "sweep-reclaim-v1",
+  "side": "LONG",
+  "timeframe_regime": "1h",
+  "timeframe_structure": "15m",
+  "timeframe_execution": "5m",
+  "session": "CRYPTO_24x7",
+  "regime": "TREND_UP",
+  "vol_regime": "EXTREME",
+  "entry": 69274.0855231416,
+  "stop": 68268.5720986271,
+  "targets": [
+    71787.86908442786,
+    73296.13922119961
+  ],
+  "planned_rr": 2.5,
+  "invalidation": "close below swept low / stop 68268.572099",
+  "exclusions_checked": [
+    "EVENT_LOCK",
+    "DATA_STALE",
+    "EXTREME_VOL",
+    "OFF_HOURS",
+    "STOP_TOO_WIDE"
+  ],
+  "evidence": [
+    {
+      "agent": "market_scout",
+      "timestamp": "2026-09-18T13:45:00Z",
+      "symbol": "BTC/USDT",
+      "summary": "session=CRYPTO_24x7 regime=TREND_UP vol=EXTREME",
+      "flags": [
+        "VOL_EXTREME",
+        "AWAY_FROM_VWAP"
+      ],
+      "metrics": {
+        "close": 66691.72209957523,
+        "vwap": 64834.21731690679,
+        "atr": 558.6185691747236
+      },
+      "data_quality_ok": true
+    },
+    {
+      "agent": "technical_analyst",
+      "timestamp": "2026-09-18T13:45:00Z",
+      "symbol": "BTC/USDT",
+      "summary": "structure=BULLISH_STACK swing_h=66691.7221 swing_l=64805.6453",
+      "flags": [],
+      "metrics": {
+        "ema_fast": 66006.56365129226,
+        "ema_slow": 65826.32641595327,
+        "structure": "BULLISH_STACK",
+        "bars": 120
+      },
+      "data_quality_ok": true
+    },
+    {
+      "agent": "liquidity_agent",
+      "timestamp": "2026-09-18T13:45:00Z",
+      "symbol": "BTC/USDT",
+      "summary": "spread_ratio=1.10 proxy=0.000110",
+      "flags": [
+        "SWEEP_RECLAIM_LONG"
+      ],
+      "metrics": {
+        "spread_ratio": 1.1,
+        "spread_proxy": 0.00011000000000000002
+      },
+      "data_quality_ok": true
+    },
+    {
+      "agent": "macro_news_agent",
+      "timestamp": "2026-09-18T13:45:00Z",
+      "symbol": "BTC/USDT",
+      "summary": "no active event lock",
+      "flags": [],
+      "metrics": {
+        "event_lock_active": false,
+        "crypto_event_flag": false
+      },
+      "data_quality_ok": true
+    }
+  ],
+  "decision_state": "WAIT_FOR_CONFIRMATION",
+  "quality_score": 0.7999999999999999,
+  "notes": "sweep-reclaim matched",
+  "proposed_quantity": null,
+  "spread": 7.336089430953276,
+  "atr_15m": 558.6185691747236,
+  "median_spread": 6.669172209957523,
+  "event_lock_active": false
+}

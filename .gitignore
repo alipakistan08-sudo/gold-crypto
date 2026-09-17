@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.mypy_cache/
+artifacts/*.jsonl
+artifacts/**/*.csv
+artifacts/kill_switch.json
+*.egg-info/
+dist/
+build/
